@@ -150,4 +150,6 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
-Belegarbeit im Modul SE I - WS 2016.pdf
+
+# keine komplierten latex-Dokumente:
+*.pdf
