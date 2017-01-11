@@ -302,6 +302,64 @@ jeweils:
 
 \section{Simon: Urlaubsvorschlag annehmen}
 
+\subsection{Textliche Beschreibung}
+
+\subsubsection{Kurzbeschreibung}
+Ein Mitarbeiter nimmt einen vorgeschlagenen Urlaub an.
+
+\subsubsection{Akteur}
+\begin{itemize}
+	\item System
+	\item Mitarbeiter
+\end{itemize}
+
+\subsubsection{Vorbedingungen}
+\begin{itemize}
+	\item Urlaubs ID
+\end{itemize}
+
+\subsubsection{Nachbedingungen}
+
+\subsubsection{Trigger}
+Wunsch den Urlaubsvorschlag anzunehmen
+
+\subsubsection{Szenarios}
+\paragraph{Hauptszenario}
+Urlaubsvorschlag liegt vor und Mitarbeiter nimmt diesen mit einer gültigen Urlaubs ID an.
+
+\begin{enumerate}
+	\item Mitarbeiter bekommt Urlaubsinformationen angezeigt
+	\item Mitarbeiter nimmt Urlaubsvorschlag an
+	\item Urlaubs ID wird an das System übermittelt
+	\item System prüft ob Urlaubs ID gültig ist
+	\item System trägt Urlaub als angenommen ein
+\end{enumerate}
+
+
+
+\paragraph{Hauptszenario}
+Urlaubsvorschlag liegt vor und Mitarbeiter nimmt diesen mit einer ungültigen Urlaubs ID an.
+
+\begin{enumerate}
+	\item Mitarbeiter bekommt Urlaubsinformationen angezeigt
+	\item Mitarbeiter nimmt Urlaubsvorschlag an
+	\item Urlaubs ID wird an das System übermittelt
+	\item System prüft ob Urlaubs ID gültig ist
+	\item System unternimmt keine weiteren Schritte, da die Urlaubs ID ungültig ist
+\end{enumerate}
+
+
+\subsubsection{Weiterführende Informationen}
+Urlaub gilt als angenommen
+
+\subsection{Aktivitätsdiagramm}
+
+\begin{center}
+% Jonatan bitte füge hier die Grafik ein
+\end{center}
+
+\subsection{Satzschablonen}
+
 
 \section{Ragnar: Urlaubsvorschlag ablehnen}
 
