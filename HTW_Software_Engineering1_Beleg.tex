@@ -385,7 +385,7 @@ Urlaubsvorschlag liegt vor und Mitarbeiter nimmt diesen mit einer gültigen Urla
 
 \begin{enumerate}
 	\item Mitarbeiter bekommt Urlaubsinformationen angezeigt
-	\item Mitarbeiter nimmt Urlaubsvorschlag an
+	\item Mitarbeiter gibt die Urlaubs ID an um den Urlaubsvorschlag anzunehmen
 	\item Urlaubs ID wird an das System übermittelt
 	\item System prüft ob Urlaubs ID gültig ist
 	\item System trägt Urlaub als angenommen ein
@@ -398,10 +398,10 @@ Urlaubsvorschlag liegt vor und Mitarbeiter nimmt diesen mit einer ungültigen Ur
 
 \begin{enumerate}
 	\item Mitarbeiter bekommt Urlaubsinformationen angezeigt
-	\item Mitarbeiter nimmt Urlaubsvorschlag an
+	\item Mitarbeiter gibt die Urlaubs ID an um den Urlaubsvorschlag anzunehmen
 	\item Urlaubs ID wird an das System übermittelt
 	\item System prüft ob Urlaubs ID gültig ist
-	\item System unternimmt keine weiteren Schritte, da die Urlaubs ID ungültig ist
+	\item Mitarbeiter bekommt erneut die Möglichkeit die Urlaubs ID einzugeben
 \end{enumerate}
 
 
@@ -415,7 +415,12 @@ Urlaub gilt als angenommen
 \end{center}
 
 \subsection{Satzschablonen}
-
+Die Funktion Urlaubsvorschlag annehmen sollte folgende Aufgaben erledigen:
+\begin{itemize}
+	\item Entscheidung ob eine Urlaubs ID gültig ist oder nicht
+	\item Eintragung eines Urlaubes als angenommen
+	\item Dem Mitarbeiter soll die Möglichkeit gegeben werden, dass er nach einer falschen Eingabe der Urlaubs ID, erneut die ID eingeben kann.
+\end{itemize}
 
 \section{Ragnar: Urlaubsvorschlag ablehnen}
 
