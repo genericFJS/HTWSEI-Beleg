@@ -275,22 +275,61 @@ jeweils:
 
 \subsubsection{Kurzbeschreibung}
 
+Ein Mitarbeiter reicht einen Urlaubsantrag ein.
+
 \subsubsection{Akteur}
+
+Mitarbeiter
 
 \subsubsection{Vorbedingungen}
 
+\begin{itemize}
+\item Urlaubsantrag
+\end{itemize}
+
+Urlaubsantrag =
+\begin{itemize}
+\item[] MA\_ID
+\item[+] Urlaubs\_ID
+\item[+] Zeitraum
+\end{itemize}
+
+Zeitraum = 
+\begin{itemize}
+\item[] Start-Datum
+\item[+] End-Datum
+\end{itemize}
+
 \subsubsection{Nachbedingungen}
+\begin{itemize}
+\item Urlaubsantrag ist im System gespeichert
+\end{itemize}
 
 \subsubsection{Trigger}
+\begin{itemize}
+\item Urlaubsantrag stellen
+\end{itemize}
 
 \subsubsection{Szenarios}
 
-\paragraph{Hauptszenario}
+\paragraph{Hauptszenario:} Mitarbeiter gibt validen Urlaubsantrag ein.
 \begin{enumerate}
-\item 
+\item Mitarbeiter möchte Urlaubsantrag stellen
+\item Mitarbeiter gibt Urlaubseintrag in System ein
+\item System überprüft Urlaubsantrag
+\item System trägt Urlaubsantrag in Urlaubsinformationen des Mitarbeiters ein
+\end{enumerate}
+
+\paragraph{Alternativszenario:} Mitarbeiter gibt keinen validen Urlaubsantrag ein.
+\begin{enumerate}
+\item Mitarbeiter möchte Urlaubsantrag stellen
+\item Mitarbeiter gibt Urlaubseintrag in System ein \label{jo-alt-back}
+\item System überprüft Urlaubsantrag
+\item Zurück zu \ref{jo-alt-back}.
 \end{enumerate}
 
 \subsubsection{Weiterführende Informationen}
+keine
 
 \subsection{Aktivitätsdiagramm}
 
