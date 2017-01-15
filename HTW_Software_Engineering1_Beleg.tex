@@ -464,6 +464,75 @@ Die Funktion Urlaubsvorschlag annehmen sollte folgende Aufgaben erledigen:
 
 \subsection{Satzschablonen}
 
+\section{Raphael: Urlaub stornieren}
+\subsection{Textliche Beschreibung}
+\subsubsection{Kurzbeschreibung}
+Ein Mitarbeiter storniert Urlaub.
+\subsubsection{Akteur}
+Mitarbeiter
+\subsubsection{Vorbedingungen}
+\begin{itemize}
+    \item Urlaubs\_ID
+\end{itemize}
+\subsubsection{Nachbedingungen}
+\begin{itemize}
+    \item Urlaub wurde aus dem System ausgetragen
+\end{itemize}
+\subsubsection{Trigger}
+\begin{itemize}
+    \item Urlaub stornieren
+\end{itemize}
+
+\subsubsection{Szenarios}
+\paragraph{Hauptszenario:}
+
+\begin{enumerate}
+    \item Mitarbeiter möchte Urlaub stornieren
+	\item Mitarbeiter gibt gültige Urlaubs\_ID ein
+	\item System prüft Urlaubs\_ID
+	\item System prüft ob Urlaubszeitraum in der Zukunft liegt
+	\item System entfernt Urlaubseintrag aus der Datenbank
+\end{enumerate}
+
+
+
+\paragraph{Alternativszenario:}
+
+\begin{itemize}
+    \item Mitarbeiter gibt ungültige Urlaubs\_ID ein:
+    \begin{enumerate}
+    	\item Mitarbeiter möchte Urlaub stornieren
+    	\item Mitarbeiter gibt Urlaubs\_ID ein \label{rp-inv-uid}
+    	\item System prüft Urlaubs\_ID
+    	\item Zurück zu \ref{rp-inv-uid}
+    \end{enumerate}
+    
+    \item Urlaub liegt in der Vergangenheit:
+     \begin{enumerate}
+    	\item Mitarbeiter möchte Urlaub stornieren
+    	\item Mitarbeiter gibt Urlaubs\_ID ein \label{rp-past}
+    	\item System prüft Urlaubs\_ID
+    	\item System prüft ob Urlaubszeitraum in der Zukunft liegt
+    	\item Zurück zu \ref{rp-past}
+    \end{enumerate}   
+\end{itemize}
+
+\subsubsection{Weiterführende Informationen}
+Keine
+
+\subsection{Aktivitätsdiagramm}
+
+\begin{center}
+\includegraphics[width=0.9\linewidth]{Urlaub_stornieren.png}
+\end{center}
+
+\subsection{Satzschablonen}
+Die Funktion „Urlaub stornieren“...
+\begin{itemize}
+    \item muss fähig sein einen Urlaubseintrag anhand einer gültigen Urlaubs\_ID aus der Datenbank zu löschen.
+    \item muss Gültigkeit eines Urlaubseintrags erkennen.
+    \item soll dem Mitarbeiter die Gültigkeit seiner Anfrage zurückgeben.
+\end{itemize}
 %\printbibliography
  
 \end{document}
