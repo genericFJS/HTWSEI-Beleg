@@ -427,36 +427,48 @@ Die Funktion Urlaubsvorschlag annehmen sollte folgende Aufgaben erledigen:
 \section{Ragnar: Urlaubsvorschlag ablehnen}
 
 \subsection{Textliche Beschreibung}
-
+ 
 \subsubsection{Kurzbeschreibung}
-
+Ein Mitarbeiter lehnt einen Urlaubsvorschlag an.
 \subsubsection{Akteur}
-
+\begin{itemize}
+\item System
+\item Mitarbeiter
+\end{itemize}
 \subsubsection{Vorbedingungen}
+\begin{itemize}
+\item Urlaubs ID
+\end{itemize}
 
 \subsubsection{Nachbedingungen}
-
+\begin{itemize}
+\item Urlaub abgelehnt
+\end{itemize}
 \subsubsection{Trigger}
-
+Wunsch den Urlaubsvorschlag ablehnen
 
 \subsubsection{Szenarios}
-\paragraph{Hauptszenario:}
-
+\paragraph{Hauptszenario:Urlaubsvorschlag liegt vor und Mitarbeiter lehnt diesen mit einer gültigen Urlaubs ID ab.}
 \begin{enumerate}
-	\item 
+	\item Mitarbeiter bekommt Urlaubsinformationen angezeigt
+	\item Mitarbeiter gibt die Urlaubs ID an um den Urlaubsvorschlag ablehnen
+	\item Urlaubs ID wird an das System übermittelt
+	\item System prüft ob Urlaubs ID gültig ist
+	\item System trägt Urlaubs als abgelehnt ein
 \end{enumerate}
 
-
-
-\paragraph{Alternativszenario:}
-
+\paragraph{Alternativszenario:Urlaubsvorschlang liegt vor und Mitarbeiter lehnt diesen mit einer ungültigen Urlaubs ID ab.}
 \begin{enumerate}
-	\item 
+	\item Mitarbeiter bekommt Urlaubsinformationen angezeigt
+	\item Mitarbeiter gibt die Urlaubs ID an um den Urlaubsvorschlag ablehnen
+	\item Urlaubs ID wird an das System übermittelt
+	\item System prüft ob Urlaubs ID gültig ist
+	\item Mitarbeiter bekommt erneut die Möglichkeit die Urlaubs ID einzugeben 
 \end{enumerate}
 
 
 \subsubsection{Weiterführende Informationen}
-
+Urlaub gilt als abgelehnt
 
 \subsection{Aktivitätsdiagramm}
 
@@ -465,7 +477,12 @@ Die Funktion Urlaubsvorschlag annehmen sollte folgende Aufgaben erledigen:
 \end{center}
 
 \subsection{Satzschablonen}
-
+Die Funktion Urlaubsvorschlag ablehnen sollte folgende Aufgaben erledigen:
+\begin{itemize}
+	\item Entscheidung ob eine Urlaubs ID gültig ist oder nicht
+	\item Eintragung eines Urlaubes als abgelehnt
+	\item Dem Mitarbeiter soll die Möglichkeit gegeben werden, dass er nach falschen Eingabe der Urlaubs ID, erneut die ID eingeben kann.
+\end{itemize}
 \section{Raphael: Urlaub stornieren}
 \subsection{Textliche Beschreibung}
 \subsubsection{Kurzbeschreibung}
