@@ -152,4 +152,4 @@ sympy-plots-for-*.tex/
 *.sav
 
 # keine komplierten latex-Dokumente:
-*.pdf
+#*.pdf
