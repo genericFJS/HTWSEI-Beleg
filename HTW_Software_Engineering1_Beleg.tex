@@ -191,7 +191,7 @@ Woche ist zu Ende& Arbeitszeitauswertung versenden & & & E-Mail versenden\\
 \end{itemize}
 \section{Krankenschein}
 \begin{itemize}[label=+]
-\item[] Mit\_ID
+\item[] MA\_ID
 \item Zeitraum
 \end{itemize}
 \section{Zeitraum}
@@ -212,8 +212,8 @@ Woche ist zu Ende& Arbeitszeitauswertung versenden & & & E-Mail versenden\\
 \item Sollarbeitszeit relativ
 \item tatsächliche Arbeitsstunden absolut
 \item tatsächliche Arbeitsstunden relativ
-\item der Urlaubstage absolut
-\item der Urlaubstage relativ
+\item Urlaubstage absolut
+\item Urlaubstage relativ
 \item Krankheitstage absolut
 \item Krankheitstage relativ
 \item Überstunden absolut
@@ -264,7 +264,7 @@ Woche ist zu Ende& Arbeitszeitauswertung versenden & & & E-Mail versenden\\
 	\includegraphics[width=0.9\linewidth]{UrlaubPlanen_AWF.PNG}
 \end{center}
 
-\chapter*{Aufgabe 7:}
+\chapter*{Aufgabe 7: Anwendungsfallbeschreibung}
 \setcounter{section}{0}
 \addtocounter{chapter}{1}
 \addcontentsline{toc}{chapter}{Aufgabe 7: Anwendungsfallbeschreibung}
@@ -347,8 +347,10 @@ keine
 \subsection{Satzschablonen}
 Die Funktion „Urlaub einreichen“…
 \begin{itemize}
-\item muss fähig sein einen validen Urlaubseintrag in die Datenbank einzutragen.
-\item muss Validität eines Urlaubseintrags erkennen.
+\item muss einen eingegebenen Urlaubsantrag erfassen.
+\item muss fähig seinen einen erfassten Urlaubsantrag zu prüfen.
+\item muss fähig sein einen Urlaubseintrag in die Datenbank einzutragen.
+\item muss dem Mitarbeiter die Möglichkeit bieten bei einem nicht validen Urlaubsantrag den Urlaubsantrag erneut einzugeben.
 \item soll die Möglichkeit bieten dem Mitarbeiter ausreichend Feedback bezüglich der Validität des Urlaubseintrags zu geben.
 \end{itemize}
 
@@ -494,8 +496,6 @@ Mitarbeiter
 	\item System entfernt Urlaubseintrag aus der Datenbank
 \end{enumerate}
 
-
-
 \paragraph{Alternativszenario:}
 
 \begin{itemize}
@@ -533,6 +533,34 @@ Die Funktion „Urlaub stornieren“...
     \item muss Gültigkeit eines Urlaubseintrags erkennen.
     \item soll dem Mitarbeiter die Gültigkeit seiner Anfrage zurückgeben.
 \end{itemize}
+
+\chapter*{Aufgabe 8: Zustandsdiagramm Urlaubsantrag}
+\setcounter{section}{0}
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{Aufgabe 8: Zustandsdiagramm Urlaubsantrag}
+
+\begin{center}
+\includegraphics[width=0.95\linewidth]{Aktivitaet_Urlaubsantrag}
+\end{center}
+
+\chapter*{Aufgabe 9: ERM}
+\setcounter{section}{0}
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{Aufgabe 9: ERM}
+
+\chapter*{Aufgabe 10: Glossar}
+\setcounter{section}{0}
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{Aufgabe 10: Glossar}
+
+\begin{tabular}{L{0.3} L{0.7}}
+Ablehnung (bei Erfassung der Anwesenheit)					&	Text mit Grund der Ablehnung.				\\
+Status (Urlaubseintrag)					&	eingereicht / abgelehnt / genehmigt / storniert / verfallen / verbraucht (basierend auf Urlaubsantrag und Urlaubsvorschlag).				\\
+*\_ID					&	Ein eindeutiger Schlüssel (Zahl).				\\
+Gültigkeit					&	gültig / nicht gültig				\\
+%					&					\\
+\end{tabular}
+
 %\printbibliography
  
 \end{document}
